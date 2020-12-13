@@ -13,14 +13,14 @@ step=step/2;
   while(j>=0 && A[j]>A[j+d])
 {
  int t=A[j];
- A[j]=A[j+d];
+ A[j]=A[j+step];
  A[j+d]=t;
  j--;
 }
 }
  step=step/2;
 }
-for (int i =0; i<lenth-1; i ++)
+for (int i =0; i<length-1; i ++)
 return A[i];
 }
 
