@@ -2,18 +2,18 @@ import subprocess
 from subprocess import PIPE
 import random
 file = input()
-subprocess.run('gcc -o ../'+file+'/main.exe ../'+file+'/main.c')
+subprocess.run('gcc -o '+file+'.exe '+file+'.c')
 s = ""
 for i in range(10):
  if i < 10:
-  filename = "../input00" + str(i) + ".txt"
-  out_file = "../output00"+str(i)+".txt"
+  filename = "input00" + str(i) + ".txt"
+  out_file = "output00" + str(i) + ".txt"
  elif i < 100:
-  filename = "../input0" + str(i) + ".txt"
-  out_file = "../output0"+str(i)+".txt"
+  filename = "input0" + str(i) + ".txt"
+  out_file = "output0" + str(i) + ".txt"
  else:
-  filename = "../input" + str(i) + ".txt"
-  out_file = "../output"+str(i)+".txt"
+  filename = "input" + str(i) + ".txt"
+  out_file = "output" + str(i) + ".txt"
  f = open(filename, "w")
  out = open(out_file, "w")
  k = random.randint(1, 10)
@@ -23,7 +23,7 @@ for i in range(10):
   s += str(k) + " "
   f.write(s)
  s = ""
- cmd = subprocess.Popen('../'+file+'/main.exe '+filename, stdout=PIPE)
+ cmd = subprocess.Popen(file + '.exe ' + filename, stdout=PIPE)
  print(i)
  cmd_out, cmd_err = cmd.communicate()
  to_file = cmd_out.decode("utf-8")
