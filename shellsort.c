@@ -42,7 +42,7 @@ shell(*q, n-1);
 
 clock_t stop=clock();
 
-printf("Time:%lf",(double)(end-begin)/CLK_TCK);
+printf("Time:%lf",(double)(stop-start)/CLOCKS_PER_SEC);
 
 printf("\n");
 for(int i = 0;i<n;i++)
