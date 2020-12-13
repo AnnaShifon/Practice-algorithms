@@ -18,7 +18,7 @@ for i in range(10):
  out = open(out_file, "w")
  k = random.randint(1, 10)
  f.write(str(k) + "\n")
- for i in range(k):
+ for t in range(k):
   k = random.randint(1, 100)
   s += str(k) + " "
   f.write(s)
