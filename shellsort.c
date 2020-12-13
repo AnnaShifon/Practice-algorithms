@@ -36,13 +36,13 @@ for(int i = 0; i < n; i++)
 fscanf(f, "%d", &q[i]);
 }
 
-clock_t begin=clock();
+clock_t start=clock();
 
 shell(*q, n-1);
 
-clock_t end=clock();
+clock_t stop=clock();
 
-printf("Time:%lf",(double)(end-begin)/CLOCKS_PER_SEC);
+printf("Time:%lf",(double)(end-begin)/CLK_TCK);
 
 printf("\n");
 for(int i = 0;i<n;i++)
