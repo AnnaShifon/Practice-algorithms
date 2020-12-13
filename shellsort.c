@@ -1,24 +1,24 @@
 #include <stdio.h>
 #include<stdlib.h>
 #include <time.h>
-void shell(int *A, int lenth)
+int shell(int *A, int length)
 {
-int d=lenth;
-d=d/2;
- while (d>0)
+int step=length;
+step=step/2;
+ while (step>0)
  {
-  for (int i=0; i<lenth-d; i++)
+  for (int i=0; i<length-step; i++)
  {
   int j=i;
   while(j>=0 && A[j]>A[j+d])
 {
- int sklad=A[j];
+ int t=A[j];
  A[j]=A[j+d];
- A[j+d]=A[j];
+ A[j+d]=t;
  j--;
 }
 }
- d=d/2;
+ step=step/2;
 }
 for (int i =0; i<lenth-1; i ++)
 return A[i];
